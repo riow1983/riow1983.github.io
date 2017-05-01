@@ -1,5 +1,5 @@
 <!doctype html>
-<title>てすとぺーじ</title>
+<title>視力換算システム</title>
 <head>
 <meta charset="UTF-8">
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
@@ -7,42 +7,37 @@
 </head>
 <body>
 
-<h1>視力換算かんたんてすと</h1>
+<h1>視力換算システム</h1>
 
-<h2> 日本式→アメリカ式 </h2>
+<h2> 日本式表記 </h2>
 <div id="app">
-   <p>日本の視力 {{ number }}</p>
-   <p>アメリカ基準　20 / {{ us_number }}</p>
-ここに日本の視力を入力してください
+ここに視力を入力してください
 <input v-model="number">
+   <p>あなたの視力は{{ number }}です。</p>
+   <p>(Yard-pound system) Your visual acuity is 20 / {{ us_number }}.</p>
+   <p>(Metric system) Your visual acuity is　6 / {{ eu_number }}.</p>
 </div>
+
 
 <br>
 
-<h2> アメリカ式→日本式 </h2>
+<h2> Yard-pound system </h2>
 <div id="app2">
-   <p>アメリカの視力 20/{{ number }}</p>
-   <p>日本基準　{{ jp_number }}</p>
-ここにアメリカの視力を入力してください　20/
+Please input your visual acuity here.　20/
 <input v-model="number">
-</div>
-
-<h2> 日本式→ヨーロッパ式 </h2>
-<div id="app3">
-   <p>日本の視力 {{ number }}</p>
-   <p>ヨーロッパ基準　6 / {{ eu_number }}</p>
-ここに日本の視力を入力してください
-<input v-model="number">
+   <p>My visual acuity is 20/{{ number }}.</p>
+   <p>（日本式表記）私の視力は{{ jp_number }}です。</p>
 </div>
 
 <br>
 
-<h2> ヨーロッパ式→日本式 </h2>
+<h2> Metric system </h2>
 <div id="app4">
-   <p>ヨーロッパの視力 6/{{ number }}</p>
-   <p>日本基準　{{ jp_number }}</p>
-ここにヨーロッパの視力を入力してください　6/
+Please input your visual acuity here.　6/
 <input v-model="number">
+   <p>My visual acuity is 6/{{ number }}.</p>
+   <p>（日本式表記）私の視力は{{ jp_number }}です。</p>
+
 </div>
 
 

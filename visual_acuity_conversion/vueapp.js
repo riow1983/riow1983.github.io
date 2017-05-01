@@ -8,6 +8,11 @@ var app = new Vue({
       var changed = Number(this.number)
       return  Math.floor(20 / changed)
 
+    },
+    eu_number: function(){
+      var changed = Number(this.number)
+      return Math.floor(6 / changed)
+
     }
   }
 })
@@ -22,13 +27,13 @@ var app2 = new Vue({
   computed:{
     jp_number: function(){
       var changed = Number(this.number)
-      return 20 / changed
+      return Math.floor(20 / changed * 10) / 10
 
     }
   }
 })
 
-
+/*
 var app3 = new Vue({
   el: '#app3',
   data: {
@@ -42,6 +47,7 @@ var app3 = new Vue({
     }
   }
 })
+*/
 
 
 var app4 = new Vue({
@@ -52,7 +58,7 @@ var app4 = new Vue({
   computed:{
     jp_number: function(){
       var changed = Number(this.number)
-      return 6 / changed 
+      return Math.floor(6 / changed * 10) / 10
 
     }
   }
