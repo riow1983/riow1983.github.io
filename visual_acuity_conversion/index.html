@@ -1,0 +1,55 @@
+<!doctype html>
+<title>てすとぺーじ</title>
+<head>
+<meta charset="UTF-8">
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<link rel=stylesheet type=text/css href="style.css">
+</head>
+<body>
+
+<h1>視力換算かんたんてすと</h1>
+
+<h2> 日本式→アメリカ式 </h2>
+<div id="app">
+   <p>日本の視力 {{ number }}</p>
+   <p>アメリカ基準　20 / {{ us_number }}</p>
+ここに日本の視力を入力してください
+<input v-model="number">
+</div>
+
+<br>
+
+<h2> アメリカ式→日本式 </h2>
+<div id="app2">
+   <p>アメリカの視力 20/{{ number }}</p>
+   <p>日本基準　{{ jp_number }}</p>
+ここにアメリカの視力を入力してください　20/
+<input v-model="number">
+</div>
+
+<h2> 日本式→ヨーロッパ式 </h2>
+<div id="app3">
+   <p>日本の視力 {{ number }}</p>
+   <p>ヨーロッパ基準　6 / {{ eu_number }}</p>
+ここに日本の視力を入力してください
+<input v-model="number">
+</div>
+
+<br>
+
+<h2> ヨーロッパ式→日本式 </h2>
+<div id="app4">
+   <p>ヨーロッパの視力 6/{{ number }}</p>
+   <p>日本基準　{{ jp_number }}</p>
+ここにヨーロッパの視力を入力してください　6/
+<input v-model="number">
+</div>
+
+
+
+<!--v-modelは双方向のバインディングを行う -->
+
+<script type="text/javascript" charset="utf8" src = "vueapp.js"></script>
+
+</body>
+</html>
