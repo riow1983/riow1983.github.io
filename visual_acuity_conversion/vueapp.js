@@ -27,7 +27,7 @@ var app2 = new Vue({
   computed:{
     jp_number: function(){
       var changed = Number(this.number)
-      return Math.floor(20 / changed * 10) / 10
+      return (Math.floor(20 / changed * 10) / 10).toFixed(1)
 
     }
   }
@@ -58,7 +58,7 @@ var app4 = new Vue({
   computed:{
     jp_number: function(){
       var changed = Number(this.number)
-      return Math.floor(6 / changed * 10) / 10
+      return (Math.floor(6 / changed * 10) / 10).toFixed(1)
 
     }
   }
