@@ -11,11 +11,13 @@
 
 <h2> 日本式表記 </h2>
 <div id="app">
-ここに視力を入力してください
+ここに患者さんの視力（小数視力）を入力してください
 <input v-model="number">
-   <p>あなたの視力は{{ number }}です。</p>
-   <p>(Yard-pound system) Your visual acuity is 20 / {{ us_number }}.</p>
-   <p>(Metric system) Your visual acuity is　6 / {{ eu_number }}.</p>
+  <p>(日本式表記)あなたの視力は{{ number }}です。</p>
+  <p>(Yard-pound system) Your eyesight is 20 / {{ us_number }}.</p>
+  <p>(Metric system) Your eyesight is　6 / {{ eu_number }}.</p>
+  <p>log MAR: {{ logmar }}</p>
+  <p>視角(分): {{ shikaku }}</p>
 </div>
 
 
@@ -23,21 +25,20 @@
 
 <h2> Yard-pound system </h2>
 <div id="app2">
-Please input your visual acuity here.　20/
+Please input your eyesight here.　20/
 <input v-model="number">
-   <p>My visual acuity is 20/{{ number }}.</p>
-   <p>（日本式表記）私の視力は{{ jp_number }}です。</p>
+  <p>(Yard-pound system) My eyesight is 20/{{ number }}.</p>
+  <p>(日本式表記) 私の視力は{{ jp_number }}です。</p>
 </div>
 
 <br>
 
 <h2> Metric system </h2>
 <div id="app4">
-Please input your visual acuity here.　6/
+Please input your eyesight here.　6/
 <input v-model="number">
-   <p>My visual acuity is 6/{{ number }}.</p>
-   <p>（日本式表記）私の視力は{{ jp_number }}です。</p>
-
+  <p>(Metric system) My visual acuity is 6/{{ number }}.</p>
+  <p>(日本式表記) 私の視力は{{ jp_number }}です。</p>
 </div>
 
 
