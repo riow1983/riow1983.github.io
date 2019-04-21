@@ -1,0 +1,51 @@
+<!doctype html>
+<title>視力換算システム</title>
+<head>
+<meta charset="UTF-8">
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<link rel=stylesheet type=text/css href="style.css">
+</head>
+<body>
+
+<h1>視力換算システム</h1>
+
+<h2> 日本式表記 </h2>
+<div id="app">
+ここに患者さんの視力（小数視力）を入力してください
+<input v-model="number" placeholder="（例）1.0">
+  <p>(日本式表記)あなたの視力は{{ number }}です。</p>
+  <p>(Yard-pound system) Your eyesight is 20 / {{ us_number }}.</p>
+  <p>(Metric system) Your eyesight is　6 / {{ eu_number }}.</p>
+  <p>log MAR: {{ logmar }}</p>
+  <p>視角(分): {{ shikaku }}</p>
+</div>
+
+
+<br>
+
+<h2> Yard-pound system </h2>
+<div id="app2">
+Please input your eyesight here.　20/
+<input v-model="number" placeholder="e.g. 20">
+  <p>(Yard-pound system) My eyesight is 20/{{ number }}.</p>
+  <p>(日本式表記) 私の視力は{{ jp_number }}です。</p>
+</div>
+
+<br>
+
+<h2> Metric system </h2>
+<div id="app4">
+Please input your eyesight here.　6/
+<input v-model="number" placeholder="e.g. 6">
+  <p>(Metric system) My eyesight is 6/{{ number }}.</p>
+  <p>(日本式表記) 私の視力は{{ jp_number }}です。</p>
+</div>
+
+
+
+<!--v-modelは双方向のバインディングを行う -->
+
+<script type="text/javascript" charset="utf8" src = "vueapp.js"></script>
+
+</body>
+</html>
